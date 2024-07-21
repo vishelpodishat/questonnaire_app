@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:questonnaire_app/core/app_constants.dart';
-import 'package:questonnaire_app/screens/chat_bot_screen.dart';
-import 'package:questonnaire_app/screens/label_screen.dart';
-import 'package:questonnaire_app/screens/main_screen.dart';
-import 'package:questonnaire_app/screens/resources_screen.dart';
-import 'package:questonnaire_app/screens/tasks_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/chat_bot_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/label_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/main_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/resources_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/tasks_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});

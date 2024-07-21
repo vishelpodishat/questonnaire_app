@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:questonnaire_app/screens/bottom_navigation.dart';
-import 'package:questonnaire_app/screens/tasks_screen.dart';
+import 'package:questonnaire_app/screens/tab_bar/bottom_navigation.dart';
 
 void main() {
   runApp(const MyApp());
