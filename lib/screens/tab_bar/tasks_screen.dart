@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:questonnaire_app/data/models/tasks_data_model.dart';
 import 'package:questonnaire_app/data/repositories/get_tasks_repo.dart';
+import 'package:questonnaire_app/screens/survey_screen.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({super.key});
@@ -197,7 +198,18 @@ class _TasksScreenState extends State<TasksScreen> {
                                         ),
                                         Spacer(),
                                         ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            if (task?.id != null) {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      SurveyScreen(
+                                                          surveyId: task!.id!),
+                                                ),
+                                              );
+                                            }
+                                          },
                                           style: ElevatedButton.styleFrom(
                                             foregroundColor:
                                                 const Color(0xffF4F7F8),

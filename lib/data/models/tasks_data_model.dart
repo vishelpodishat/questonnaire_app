@@ -1,15 +1,15 @@
 class TasksDataModel {
   String? message;
-  List<Data>? data;
+  List<TasksData>? data;
 
   TasksDataModel({this.message, this.data});
 
   TasksDataModel.fromJson(Map<String, dynamic> json) {
     message = json['message'];
     if (json['data'] != null) {
-      data = <Data>[];
+      data = <TasksData>[];
       json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
+        data!.add(TasksData.fromJson(v));
       });
     }
   }
@@ -24,15 +24,15 @@ class TasksDataModel {
   }
 }
 
-class Data {
+class TasksData {
   String? id;
   String? title;
   String? tag;
   String? deadline;
 
-  Data({this.id, this.title, this.tag, this.deadline});
+  TasksData({this.id, this.title, this.tag, this.deadline});
 
-  Data.fromJson(Map<String, dynamic> json) {
+  TasksData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
     tag = json['tag'];
