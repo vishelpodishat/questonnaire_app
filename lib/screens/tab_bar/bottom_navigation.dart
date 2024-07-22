@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:questonnaire_app/core/app_constants.dart';
 import 'package:questonnaire_app/screens/tab_bar/chat_bot_screen.dart';
 import 'package:questonnaire_app/screens/tab_bar/label_screen.dart';
@@ -42,7 +41,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         selectedItemColor: AppConstants.selectedTabsColor,
         unselectedItemColor: AppConstants.unselectedTabsColor.withOpacity(0.6),
         showUnselectedLabels: true,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage('assets/icons/main_icon.png'),

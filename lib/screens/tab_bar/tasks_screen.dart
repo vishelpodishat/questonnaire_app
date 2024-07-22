@@ -136,7 +136,7 @@ class _TasksScreenState extends State<TasksScreen> {
                             children: [
                               Container(
                                 height: 120,
-                                padding: EdgeInsets.all(12),
+                                padding: const EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(8),
@@ -146,7 +146,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                   children: [
                                     Text(
                                       task?.tag ?? "",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontFamily: 'Nunito',
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
@@ -156,7 +156,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                     const SizedBox(height: 8),
                                     Text(
                                       task?.title ?? " ",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontFamily: 'Nunito',
                                           fontSize: 16,
                                           fontWeight: FontWeight.w700,
@@ -164,7 +164,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                     ),
                                     Row(
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Осталось:',
                                           style: TextStyle(
                                             fontFamily: 'Nunito',
@@ -177,7 +177,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                         Container(
                                           height: 30,
                                           decoration: BoxDecoration(
-                                            color: Color(0xffFDF5E4),
+                                            color: const Color(0xffFDF5E4),
                                             borderRadius:
                                                 BorderRadius.circular(100),
                                           ),
@@ -187,7 +187,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                                 vertical: 6, horizontal: 10),
                                             child: Text(
                                               task?.deadline ?? "",
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                 fontFamily: 'Nunito',
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w700,
@@ -196,7 +196,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                             ),
                                           ),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         ElevatedButton(
                                           onPressed: () {
                                             if (task?.id != null) {
@@ -216,7 +216,7 @@ class _TasksScreenState extends State<TasksScreen> {
                                             backgroundColor:
                                                 const Color(0xff29B1DD),
                                             elevation: 0,
-                                            padding: EdgeInsets.symmetric(
+                                            padding: const EdgeInsets.symmetric(
                                                 vertical: 6, horizontal: 14),
                                           ),
                                           child: const Text(

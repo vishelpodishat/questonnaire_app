@@ -19,24 +19,21 @@ class GetTasksRepo {
         throw Exception('Failed to load tasks');
       }
     } catch (e) {
-      print('Error $e');
-      rethrow;
+      throw Exception('Error: $e');
     }
   }
 
-  Future<SurveyDataModel> getTasksById(String id) async {
+  Future<SurveyDataModel> getTaskById(String id) async {
     try {
-      final Response response = await dio.get(
-          'https://getquestionnairesendpoint-nfhw57yfsq-uc.a.run.app/?id=$id');
+      final Response response = await dio
+          .get('https://getquestionnairebyid-nfhw57yfsq-uc.a.run.app/?id=$id');
       if (response.statusCode == 200) {
-        print(response.data);
-        return SurveyDataModel.fromJson(response.data);
+        return surveyDataModelFromJson(response.data);
       } else {
         throw Exception('Failed to load task by ID');
       }
     } catch (e) {
-      print('Error $e');
-      rethrow;
+      throw Exception('Error: $e');
     }
   }
 }
